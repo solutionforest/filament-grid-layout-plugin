@@ -3,6 +3,7 @@
 namespace SolutionForest\GridLayoutPlugin;
 
 use Filament\PluginServiceProvider;
+use SolutionForest\GridLayoutPlugin\Commands;
 use Spatie\LaravelPackageTools\Package;
 
 class GridLayoutPluginServiceProvider extends PluginServiceProvider
@@ -35,6 +36,7 @@ class GridLayoutPluginServiceProvider extends PluginServiceProvider
 
     public function configurePackage(Package $package): void
     {
-        $package->name(static::$name);
+        $package->name(static::$name)
+            ->hasCommand(Commands\GridLayoutPluginCommand::class);
     }
 }
