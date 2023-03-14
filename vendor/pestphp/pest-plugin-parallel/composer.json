@@ -1,0 +1,70 @@
+{
+    "name": "pestphp/pest-plugin-parallel",
+    "description": "The Pest Parallel Plugin",
+    "keywords": [
+        "php",
+        "framework",
+        "pest",
+        "unit",
+        "test",
+        "testing",
+        "plugin",
+        "parallel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "brianium/paratest": "^6.3",
+        "pestphp/pest-plugin": "^1.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "dev-master",
+        "pestphp/pest-dev-tools": "dev-master"
+    },
+    "conflict": {
+        "pestphp/pest": "<1.16",
+        "nunomaduro/collision": "<5.8",
+        "laravel/framework": "<8.55"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pest\\Parallel\\": "src/"
+        },
+        "exclude-from-classmap": [
+            "ParaTest\\Runners\\PHPUnit\\Worker\\RunnerWorker",
+            "ParaTest\\Runners\\PHPUnit\\BaseRunner"
+        ],
+        "files": [
+            "src/Autoload.php",
+            "build/RunnerWorker.php",
+            "build/BaseRunner.php"
+        ]
+    },
+    "extra": {
+        "pest": {
+            "plugins": [
+                "Pest\\Parallel\\Plugin"
+            ]
+        },
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist"
+    },
+    "scripts": {
+        "lint": "php-cs-fixer fix -v",
+        "test:lint": "php-cs-fixer fix -v --dry-run",
+        "test:types": "phpstan analyse --ansi",
+        "test:unit": "pest --colors=always",
+        "test": [
+            "@test:lint",
+            "@test:types",
+            "@test:unit"
+        ]
+    }
+}
