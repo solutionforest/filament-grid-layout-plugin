@@ -12,7 +12,7 @@ final class GeneratedConfig
 	public const EXTENSIONS = array (
   'nesbot/carbon' => 
   array (
-    'install_path' => '/Users/alan/Development/solution-forest/projects/grid-layout-plugin/vendor/nesbot/carbon',
+    'install_path' => 'C:\\Users\\carly.cheung\\Documents\\Test\\Laravel10Test\\web\\packages\\grid-page-layout\\vendor/nesbot/carbon',
     'relative_install_path' => '../../../nesbot/carbon',
     'extra' => 
     array (
@@ -25,7 +25,7 @@ final class GeneratedConfig
   ),
   'nunomaduro/larastan' => 
   array (
-    'install_path' => '/Users/alan/Development/solution-forest/projects/grid-layout-plugin/vendor/nunomaduro/larastan',
+    'install_path' => 'C:\\Users\\carly.cheung\\Documents\\Test\\Laravel10Test\\web\\packages\\grid-page-layout\\vendor/nunomaduro/larastan',
     'relative_install_path' => '../../../nunomaduro/larastan',
     'extra' => 
     array (
@@ -38,7 +38,7 @@ final class GeneratedConfig
   ),
   'phpstan/phpstan-deprecation-rules' => 
   array (
-    'install_path' => '/Users/alan/Development/solution-forest/projects/grid-layout-plugin/vendor/phpstan/phpstan-deprecation-rules',
+    'install_path' => 'C:\\Users\\carly.cheung\\Documents\\Test\\Laravel10Test\\web\\packages\\grid-page-layout\\vendor/phpstan/phpstan-deprecation-rules',
     'relative_install_path' => '../../phpstan-deprecation-rules',
     'extra' => 
     array (
@@ -51,7 +51,7 @@ final class GeneratedConfig
   ),
   'phpstan/phpstan-phpunit' => 
   array (
-    'install_path' => '/Users/alan/Development/solution-forest/projects/grid-layout-plugin/vendor/phpstan/phpstan-phpunit',
+    'install_path' => 'C:\\Users\\carly.cheung\\Documents\\Test\\Laravel10Test\\web\\packages\\grid-page-layout\\vendor/phpstan/phpstan-phpunit',
     'relative_install_path' => '../../phpstan-phpunit',
     'extra' => 
     array (
@@ -65,7 +65,7 @@ final class GeneratedConfig
   ),
   'spatie/invade' => 
   array (
-    'install_path' => '/Users/alan/Development/solution-forest/projects/grid-layout-plugin/vendor/spatie/invade',
+    'install_path' => 'C:\\Users\\carly.cheung\\Documents\\Test\\Laravel10Test\\web\\packages\\grid-page-layout\\vendor/spatie/invade',
     'relative_install_path' => '../../../spatie/invade',
     'extra' => 
     array (

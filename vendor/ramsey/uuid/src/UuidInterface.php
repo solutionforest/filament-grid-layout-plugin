@@ -19,7 +19,6 @@ use Ramsey\Uuid\Fields\FieldsInterface;
 use Ramsey\Uuid\Type\Hexadecimal;
 use Ramsey\Uuid\Type\Integer as IntegerObject;
 use Serializable;
-use Stringable;
 
 /**
  * A UUID is a universally unique identifier adhering to an agreed-upon
@@ -30,8 +29,7 @@ use Stringable;
 interface UuidInterface extends
     DeprecatedUuidInterface,
     JsonSerializable,
-    Serializable,
-    Stringable
+    Serializable
 {
     /**
      * Returns -1, 0, or 1 if the UUID is less than, equal to, or greater than

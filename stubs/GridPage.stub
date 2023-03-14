@@ -1,0 +1,18 @@
+<?php
+
+namespace {{ namespace }};
+
+use SolutionForest\GridLayoutPlugin\Pages\Grid as BasePage;
+use SolutionForest\GridLayoutPlugin\Components\Grid;
+use SolutionForest\GridLayoutPlugin\Components\Grid\Row;
+use SolutionForest\GridLayoutPlugin\Components\Grid\Column;
+
+class {{ class }} extends BasePage
+{
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+
+    protected function getGridSchema(): array
+    {
+        return [];
+    }
+}
