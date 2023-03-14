@@ -42,8 +42,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SolutionForest\\GridLayoutPlugin\\": "src",
-            "SolutionForest\\GridLayoutPlugin\\Database\\Factories\\": "database/factories"
+            "SolutionForest\\GridLayoutPlugin\\": "src"
         }
     },
     "autoload-dev": {
