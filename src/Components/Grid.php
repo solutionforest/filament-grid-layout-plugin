@@ -4,7 +4,6 @@ namespace SolutionForest\GridLayoutPlugin\Components;
 
 use Closure;
 use Filament\Support\Components\ViewComponent;
-use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\Str;
 
 class Grid extends ViewComponent
@@ -54,7 +53,7 @@ class Grid extends ViewComponent
             call_user_func($callback, $row);
 
             $this->addRow($row);
-        } else if(is_string($callback)) {
+        } else if (is_string($callback)) {
 
             $this->addRow(Grid\Row::make()->column(12, Str::of($callback)->toHtmlString()));
         } else {
