@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 class Grid extends ViewComponent
 {
-    protected string $view = 'components.grid';
+    protected string $view = 'grid-layout-plugin::components.grid';
 
     /** @var Grid\Row[]*/
     protected array $rows = [];

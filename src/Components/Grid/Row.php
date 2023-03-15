@@ -9,7 +9,7 @@ use SolutionForest\GridLayoutPlugin\Components;
 
 class Row extends ViewComponent
 {
-    protected string $view = 'components.grid.row';
+    protected string $view = 'grid-layout-plugin::components.grid.row';
 
     /** @var Components\Grid\Column[] */
     protected array $columns = [];

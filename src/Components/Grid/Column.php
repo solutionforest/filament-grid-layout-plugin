@@ -11,7 +11,7 @@ use SolutionForest\GridLayoutPlugin\Components;
 
 class Column extends ViewComponent
 {
-    protected string $view = 'components.grid.column';
+    protected string $view = 'grid-layout-plugin::components.grid.column';
 
     protected ?array $columnSpan = [];
 

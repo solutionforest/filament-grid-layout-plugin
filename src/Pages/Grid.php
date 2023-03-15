@@ -7,7 +7,7 @@ use Filament\Pages\Page;
 
 abstract class Grid extends Page
 {
-    protected static string $view = 'filament.pages.grid';
+    protected static string $view = 'grid-layout-plugin::pages.grid';
 
     protected Components\Grid $grid;
 
