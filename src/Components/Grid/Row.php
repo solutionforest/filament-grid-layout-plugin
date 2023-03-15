@@ -54,8 +54,9 @@ class Row extends ViewComponent
         return $this;
     }
 
-    public function column(array|int|null $columnSpan = 12, \Livewire\Component|\Illuminate\View\Component|HtmlString|Closure|null $callback): static
+    public function column(array|int|null $columnSpan = 12, \Livewire\Component|\Illuminate\View\Component|HtmlString|Closure|null $callback = null): static
     {
+
         if ($callback instanceof Closure) {
 
             $column = Components\Grid\Column::make($columnSpan);
@@ -63,7 +64,6 @@ class Row extends ViewComponent
             call_user_func($callback, $column);
 
             $this->addColumn($column);
-
         } else {
 
             $this->addColumn(Components\Grid\Column::make($columnSpan, $callback));

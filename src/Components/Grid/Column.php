@@ -80,7 +80,7 @@ class Column extends ViewComponent
 
     protected function columnSpan(array|int|null $columnSpan = 2): static
     {
-        if (! is_array($columnSpan)) {
+        if (!is_array($columnSpan)) {
             $columnSpan = [
                 'lg' => $columnSpan,
             ];
@@ -103,18 +103,18 @@ class Column extends ViewComponent
         return $this->columnSpan;
     }
 
-    public function getComponents()
+    public function getComponents(): ?array
     {
         return array_map(function ($component) {
-            if ($component instanceof Table ||
+            if (
+                $component instanceof Table ||
                 $component instanceof Widget ||
                 $component instanceof Components\Grid\Row ||
                 $component instanceof HtmlString ||
                 is_null($component)
             ) {
                 return $component;
-            }
-            else {
+            } else {
                 return $component->render();
             }
         }, $this->components);

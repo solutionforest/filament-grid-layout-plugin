@@ -21,7 +21,7 @@ class MakeGridPageCommand extends Command
         $path = config('filament.pages.path', app_path('Filament/Pages/'));
         $namespace = config('filament.pages.namespace', 'App\\Filament\\Pages');
 
-        $page = (string) Str::of($this->argument('name') ?? $this->askRequired('Name (e.g. `Settings`)', 'name'))
+        $page =  Str::of(strval($this->argument('name') ?? $this->askRequired('Name (e.g. `Settings`)', 'name')))
             ->trim('/')
             ->trim('\\')
             ->trim(' ')
