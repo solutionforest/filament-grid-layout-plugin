@@ -14,7 +14,7 @@
             @if ($component->canView())
                 @livewire(\Livewire\Livewire::getAlias(get_class($component)))
             @endif
-        @elseif ($component instanceof \App\Filament\Support\Component\Grid\Row)
+        @elseif ($component instanceof \SolutionForest\GridLayoutPlugin\Components\Grid\Row)
             <div class="mt-1">
                 <x-grid-layout-plugin::grid.row :row="$component" />
             </div>
