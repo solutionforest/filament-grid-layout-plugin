@@ -12,7 +12,7 @@ class MakeGridPageCommand extends Command
     use CanManipulateFiles;
     use CanValidateInput;
 
-    protected $signature = "make:filament-grid-page {name?}";
+    protected $signature = "make:filament-grid-page {name?} {--T|type=}";
 
     public $description = 'Creates a Filament grid page class';
 
@@ -20,6 +20,8 @@ class MakeGridPageCommand extends Command
     {
         $path = config('filament.pages.path', app_path('Filament/Pages/'));
         $namespace = config('filament.pages.namespace', 'App\\Filament\\Pages');
+
+        $stub = $this->option('type') == 'widget' ? 'GridWidgetPage' : 'GridPage';
 
         $page =  Str::of(strval($this->argument('name') ?? $this->askRequired('Name (e.g. `Settings`)', 'name')))
             ->trim('/')
@@ -38,7 +40,7 @@ class MakeGridPageCommand extends Command
             ->replace('//', '/')
             ->append('.php');
 
-        $this->copyStubToApp('GridPage', $path, [
+        $this->copyStubToApp($stub, $path, [
             'class' => $pageClass,
             'namespace' => $namespace . ($pageNamespace !== '' ? "\\{$pageNamespace}" : ''),
         ]);

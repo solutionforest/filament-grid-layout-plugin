@@ -1,0 +1,21 @@
+<?php
+
+namespace {{ namespace }};
+
+use SolutionForest\GridLayoutPlugin\Pages\Grid\WidgetPage as BasePage;
+
+class {{ class }} extends BasePage
+{
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+
+
+    protected function getWidgets(): array
+    {
+        return [];
+    }
+
+    protected function getColumns(): int | array
+    {
+        return 2;
+    }
+}
