@@ -38,9 +38,4 @@ abstract class Grid extends Page
 
         return static::grid(Components\Grid::make());
     }
-
-    protected function isFullWidth(): bool
-    {
-        return false;
-    }
 }
