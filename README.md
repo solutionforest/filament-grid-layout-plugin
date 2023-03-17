@@ -79,7 +79,7 @@ protected function getGridSchema(): array
 Or you can create grid layout which only support widgets similar with `\Filament\Pages\Dashboard`:
 
 ```bash
-php artisan make:filament-grid-page
+php artisan make:filament-grid-page --type=widget
 ```
 
 ```php
