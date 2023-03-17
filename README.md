@@ -15,30 +15,81 @@ You can install the package via composer:
 composer require solution-forest/grid-layout-plugin
 ```
 
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="grid-layout-plugin-config"
-```
-
 Optionally, you can publish the views using
 
 ```bash
 php artisan vendor:publish --tag="grid-layout-plugin-views"
 ```
 
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
 ## Usage
 
+To create grid layout page :
+```bash
+php artisan make:filament-grid-page
+```
+The `getGridSchema()` method is used to define the structure of grid layout. It is an array of fields, in the order they should appear in the layout.
+
+
+The following components are available for grid layout:
+<ul>
+    <li>\SolutionForest\GridLayoutPlugin\Components\Grid\Row</li>
+    <li>\Livewire\Component</li>
+    <li>\Illuminate\View\Component</li>
+    <li>\Illuminate\Support\HtmlString</li>
+</ul>
+
 ```php
-$grid-layout-plugin = new SolutionForest\GridLayoutPlugin();
-echo $grid-layout-plugin->echoPhrase('Hello, SolutionForest!');
+use SolutionForest\GridLayoutPlugin\Pages\Grid as BasePage;
+use SolutionForest\GridLayoutPlugin\Components\Grid;
+use SolutionForest\GridLayoutPlugin\Components\Grid\Row;
+use SolutionForest\GridLayoutPlugin\Components\Grid\Column;
+
+protected function getGridSchema(): array
+{
+    return [
+        Components\Grid\Row::make([
+            Components\Grid\Column::make(
+                6,
+                \Filament\Widgets\StatsOverviewWidget\Card::make('Revenue', '$192.1k')
+                    ->description('32k increase')
+                    ->descriptionIcon('heroicon-s-trending-up')
+                    ->chart([7, 2, 10, 3, 15, 4, 17])
+                    ->color('success'),
+            ),
+            Components\Grid\Column::make(
+                6,
+                \Filament\Widgets\StatsOverviewWidget\Card::make('Revenue', '$192.1k')
+                    ->description('3% decrease')
+                    ->descriptionIcon('heroicon-s-trending-down')
+                    ->chart([17, 16, 14, 15, 14, 13, 12])
+                    ->color('danger')
+            ),
+        ]),
+        \Filament\Widgets\StatsOverviewWidget\Card::make('Revenue', '$192.1k')
+            ->description('7% increase')
+            ->descriptionIcon('heroicon-s-trending-up')
+            ->chart([15, 4, 10, 2, 12, 4, 12])
+            ->color('success'),
+        new \Illuminate\Support\HtmlString("<div>Dummy Html Element</div>"),
+        view('welcome'),
+    ];
+}
+```
+
+Or you can create grid layout which only support widgets similar with `\Filament\Pages\Dashboard`:
+
+```bash
+php artisan make:filament-grid-page
+```
+
+```php
+protected function getWidgets(): array
+{
+    return [
+        \Filament\Widgets\AccountWidget::class,
+        \Filament\Widgets\FilamentInfoWidget::class,
+    ];
+}
 ```
 
 ## Testing
