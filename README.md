@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> We will achieve this project since filament3 supports Grid now.
+> https://beta.filamentphp.com/docs/3.x/infolists/layout/grid
+
 # Grid Layout Plugin
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/solution-forest/grid-layout-plugin.svg?style=flat-square)](https://packagist.org/packages/solution-forest/grid-layout-plugin)
