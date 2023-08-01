@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> We will achieve this project since filament3 supports Grid now.
+> We will archive this project since filament3 supports Grid now.
 > https://beta.filamentphp.com/docs/3.x/infolists/layout/grid
 
 # Grid Layout Plugin
